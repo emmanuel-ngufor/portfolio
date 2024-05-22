@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Details</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body tabindex="-1">
+
+     <!-- include navbar.ejs -->
+  <%- include('partials/navbar', {page: ''}) %>
+
+  <div class="container mx-auto p-4">
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Lego Web App</h1>
+            <p class="py-6">Here is all you need to know about my: Lego Web App</p>
+        </div>
+    </div>
+   </div> 
+
+    <div class="grid grid-cols-1 sm:grid-cols-2  gap-6 mt-6">
+        <div><img src="/images/Lego-web-app-mugshot.png" alt="lego Web App Mugshot" class="avatar"></div>
+        <div>
+            <p><strong>Name:</strong> Lego Web App</p>
+            <p><strong>Year Released:</strong> 2024</p>
+            <p><strong>Tech Stack Used:</strong> Javascript - Node.js- Express.js - PostGre - MongoDB - Daisy UI & Tailwind CSS</p>
+            <p><strong>Functionalities</strong> View - Add - Edit - Delete legos based on user preferences</p> <br><br>
+            <p><div id="quote"></div><br></p>
+            <button href="#"  onclick="history.back(); return false;" class="btn btn-secondary ">Back</button>
+             <!-- Add link button linking to the website online -->
+            <a href="https://lego-web-app.vercel.app/" class="btn btn-success">Go to Website</a>
+        </div>
+        </div>
+        </div>
+
+  </div> 
+
+  <br><br>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("https://quotable.io/random")
+        .then(response => response.json())
+        .then(data => {
+          const quoteElement = document.getElementById("quote");
+          quoteElement.innerHTML = `<blockquote>${data.content}</blockquote><cite>- ${data.author}</cite>`;
+        })
+        .catch(error => {
+          console.error("Error fetching quote:", error);
+        });
+    });
+  </script>
+
+    <!-- include footer.ejs-->
+    <%-include('./partials/footer.ejs') %>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Details</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body tabindex="-1">
+
+     <!-- include navbar.ejs -->
+  <%- include('partials/navbar', {page: ''}) %>
+
+  <div class="container mx-auto p-4">
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Vetinary Clinc Appointment System</h1>
+            <p class="py-6">Here is all you need to know about my: Vetinary Clinc Appointment System</p>
+        </div>
+    </div>
+   </div> 
+
+    <div class="grid grid-cols-1 sm:grid-cols-2  gap-6 mt-6">
+        <div><img src="https://thumbs.dreamstime.com/b/reminder-vet-appointment-calendar-green-pen-close-up-reminder-vet-appointment-calendar-green-pen-106583022.jpg" alt="Vetinary Clinc Appointment System" class="avatar"></div>
+        <div>
+            <p><strong>Name:</strong> Vetinary Clinc Appointment System</p>
+            <p><strong>Year Released:</strong> 2023</p>
+            <p><strong>Tech Stack Used:</strong> C 100%</p>
+            <p><strong>Functionalities</strong> C application for managing patient (pet) contact information and appointment scheduling. Also it includes several workshops and notes for any novice to C programmings</p> <br><br>
+            <p><div id="quote"></div><br></p>
+            <button href="#"  onclick="history.back(); return false;" class="btn btn-secondary ">Back</button>
+             <!-- Add link button linking to the website online -->
+            <a href="https://github.com/emmanuel-ngufor/veterinary-clinic-appointment-system-C-" class="btn btn-success">Get source code on Github</a>
+        </div>
+        </div>
+        </div>
+
+  </div> 
+
+  <br><br>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("https://quotable.io/random")
+        .then(response => response.json())
+        .then(data => {
+          const quoteElement = document.getElementById("quote");
+          quoteElement.innerHTML = `<blockquote>${data.content}</blockquote><cite>- ${data.author}</cite>`;
+        })
+        .catch(error => {
+          console.error("Error fetching quote:", error);
+        });
+    });
+  </script>
+
+    <!-- include footer.ejs-->
+    <%-include('./partials/footer.ejs') %>
+
+</body>
+</html>

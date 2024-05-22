@@ -1,0 +1,22 @@
+{
+  "name": "personal-works",
+  "version": "1.0.0",
+  "description": "side projects to build competent",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw:build": "tailwindcss build -i ./public/css/tailwind.css -o ./public/css/main.css"
+  },
+  "author": "Emmanuel",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "daisyui": "^4.10.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

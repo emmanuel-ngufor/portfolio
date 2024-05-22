@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Details</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body tabindex="-1">
+
+     <!-- include navbar.ejs -->
+  <%- include('partials/navbar', {page: ''}) %>
+
+  <div class="container mx-auto p-4">
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Assembly Line Simulation System</h1>
+            <p class="py-6">Here is all you need to know about my: Assembly Line Simulation System</p>
+        </div>
+    </div>
+   </div> 
+
+    <div class="grid grid-cols-1 sm:grid-cols-2  gap-6 mt-6">
+        <div><img src="https://global.discourse-cdn.com/nvidia/original/3X/0/f/0fb7874d932934ec4263361746b67967c398b587.jpeg" alt="Assembly Line Simulation System" class="avatar"></div>
+        <div>
+            <p><strong>Name:</strong> Assembly Line Simulation System</p>
+            <p><strong>Year Released: </strong> 2024</p>
+            <p><strong>Tech Stack Used: </strong> C++ 100%</p>
+            <p><strong>Functionalities: </strong> Utilized class-based structures to categorize items, track quantities, and optimize shipping logistics. Demonstrated expertise in object-oriented programming, problem-solving, and systematic project design.  This system allows users to create virtual representations of assembly lines, including workstations, machinery, and workflow processes. By simulating the production process, users can identify bottlenecks, test different configurations, and assess the impact of changes without disrupting actual operations. Features often include real-time data visualization, performance metrics, and the ability to run various scenarios to improve efficiency, reduce costs, and enhance overall productivity. This system is invaluable for planning, training, and decision-making in industrial settings.</p> <br><br>
+            <p><div id="quote"></div><br></p>
+            <button href="#"  onclick="history.back(); return false;" class="btn btn-secondary ">Back</button>
+             <!-- Add link button linking to the website online -->
+            <a href="https://github.com/emmanuel-ngufor/assembly-line-simulation-system-for-a-number-of-stations" class="btn btn-success">Get source code on Github</a>
+        </div>
+        </div>
+        </div>
+
+  </div> 
+
+  <br><br>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("https://quotable.io/random")
+        .then(response => response.json())
+        .then(data => {
+          const quoteElement = document.getElementById("quote");
+          quoteElement.innerHTML = `<blockquote>${data.content}</blockquote><cite>- ${data.author}</cite>`;
+        })
+        .catch(error => {
+          console.error("Error fetching quote:", error);
+        });
+    });
+  </script>
+
+    <!-- include footer.ejs-->
+    <%-include('./partials/footer.ejs') %>
+
+</body>
+</html>
