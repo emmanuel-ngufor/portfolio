@@ -7,9 +7,13 @@ const path = require("path")
 // require("dotenv").config();            // load environment variables from the .env file via process.env
 
 app.set("view engine", "ejs");                            // set view engine for EJS
-app.set('views', path.join(__dirname, 'views'));          // ---> Changed due to vercel hosting
+
+
+// app.set('views', path.join(__dirname, 'views'));          // ---> Changed due to vercel hosting
+app.set('views', __dirname + '/views');                      // ---> Changed due to vercel hosting
 // app.use(express.static("public"));                     // Middleware to handle  static files like CSS and Images from public directory
-app.use(express.static(path.join(__dirname, 'public')));  // ---> Original --> Changed due to vercel hosting
+// app.use(express.static(path.join(__dirname, "public")));  // ---> Original --> Changed due to vercel hosting
+app.use(express.static(__dirname + "/public"));    // ---> Changed due to vercel hosting
 
 
 
