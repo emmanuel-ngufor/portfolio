@@ -2,16 +2,15 @@ const express = require("express");                    // "require" the Express 
 const app = express();                                 // obtain the "app" object
 const HTTP_PORT = process.env.PORT || 8080;            // assign a port
 const path = require("path")
-const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
+
+
 // require("dotenv").config();            // load environment variables from the .env file via process.env
 
 app.set("view engine", "ejs");                            // set view engine for EJS
 app.set('views', path.join(__dirname, 'views'));          // ---> Changed due to vercel hosting
 // app.use(express.static("public"));                     // Middleware to handle  static files like CSS and Images from public directory
 app.use(express.static(path.join(__dirname, 'public')));  // ---> Original --> Changed due to vercel hosting
-// Middleware to parse JSON bodies
-app.use(bodyParser.json());
+
 
 
 
