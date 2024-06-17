@@ -54,6 +54,15 @@ app.get("/project4", (req, res) => {
     res.render("project4");
 });
 
+// Handles any routes that are not defined above
+// 404 pages - not found - Always goes at the bottom
+app.use((req, res) => {
+    res.status(404).render("404", {
+      message:
+        "I'm Sorry, we're unable to find the page you were looking for (︶︹︺)",
+    });
+  });
+
 
 
 // start the server on the port and output a confirmation to the console

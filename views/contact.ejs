@@ -1,54 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="/css/main.css" />
     <!-- <link rel="stylesheet" href="/css/styles.css" /> -->
-</head>
+  </head>
 
-<body tabindex="-1">
-
+  <body tabindex="-1">
     <!-- include navbar.ejs -->
     <%- include('partials/navbar', {page: '/contact'}) %>
 
     <div class="container mx-auto p-4">
-        <div class="hero bg-base-200 rounded-lg p-6">
-            <div class="hero-content text-center">
-                <div class="max-w-md">
-                    <h1 class="text-5xl font-bold">Contact</h1>
-                    <p class="py-6">GET IN TOUCH WITH ME</p>
-                </div>
-            </div>
+      <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Contact</h1>
+            <p class="py-6">GET IN TOUCH WITH ME</p>
+          </div>
         </div>
+      </div>
 
-        <!-- Contact Form 1 -->
-        <!-- <div class="max-w-md mx-auto p-4"> -->
-        <div> 
-            <form action="mailto:sahforemmanuel@gmail.com" method="post" enctype="text/plain">
-                <div class="form-control">
-                    <label class="label" for="reason">
-                        <span class="label-text">Reason for Contact:</span>
-                    </label>
-                    <input type="text" id="reason" name="reason" placeholder="Enter reason" required class="input input-bordered">
-                </div>
-                <div class="form-control">
-                    <label class="label" for="message">
-                        <span class="label-text">Message:</span>
-                    </label>
-                    <textarea id="message" name="message" placeholder="Enter your message" rows="5" required class="textarea input-bordered"></textarea>
-                </div>
-                <div class=" flex items-center justify-between">
-                    <button href="#"  onclick="history.back(); return false;" class="btn btn-secondary mt-4 mr-4 ">Back</button>
-                    <button type="submit" class="btn btn-primary mt-4">Send</button>
-                </div>
-                
-            </form>
-        </div>
+      <!-- Contact Form 1 -->
+      <!-- <div class="max-w-md mx-auto p-4"> -->
+      <div>
+        <form
+          action="mailto:sahforemmanuel@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="form-control">
+            <label class="label" for="reason">
+              <span class="label-text">Reason for Contact:</span>
+            </label>
+            <input
+              type="text"
+              id="reason"
+              name="reason"
+              placeholder="Enter reason"
+              required
+              class="input input-bordered"
+            />
+          </div>
+          <div class="form-control">
+            <label class="label" for="message">
+              <span class="label-text">Message:</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              rows="5"
+              required
+              class="textarea input-bordered"
+            ></textarea>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              href="#"
+              onclick="history.back(); return false;"
+              class="btn btn-secondary mt-4 mr-4"
+            >
+              Back
+            </button>
+            <button type="submit" class="btn btn-primary mt-4">Send</button>
+          </div>
+        </form>
+      </div>
 
-        <!-- Contact Form 2
+    </div>
+
+    <!-- include footer.ejs -->
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
+
+
+
+      <!-- Contact Form 2
         <div class="container">
             <form>
                 <h3>GET IN TOUCH</h3>
@@ -79,13 +109,3 @@
                 <button type="submit" class="btn btn-primary mt-4">Send</button>
             </form>
         </div>  -->
-
-        
-    </div> 
-
-    <!-- include footer.ejs -->
-    <%- include('./partials/footer.ejs') %>
-
-</body>
-
-</html>

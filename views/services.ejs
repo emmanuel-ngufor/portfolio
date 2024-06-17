@@ -1,119 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services</title>
-  <link rel="stylesheet" href="/css/main.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
 
-<body tabindex="-1">
+  <body tabindex="-1">
+    <!-- include navbar.ejs-->
+    <%- include('partials/navbar', {page: '/services'}) %>
 
-     <!-- include navbar.ejs-->
-  <%- include('partials/navbar', {page: '/services'}) %>
-
-  <div class="container mx-auto p-4">
-    <div class="hero bg-base-200 rounded-lg p-6">
-      <div class="hero-content text-center ">
-        <div class="max-w-md">
-          <h1 class="text-5xl font-bold">Services</h1>
-          <p class="py-6">Offering custom software development, iOS app development, entrepreneurship support, comprehensive software testing, and innovative web design to help your business thrive.</p>
+    <div class="container mx-auto p-4">
+      <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Services</h1>
+            <p class="py-6">
+              Offering custom software development, iOS app development,
+              entrepreneurship support, comprehensive software testing, and
+              innovative web design to help your business thrive.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <br />
-         <!-- grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 mt-8">
-
+      <br />
+      <!-- grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 mt-8">
         <!-- Card 1 -->
         <div class="hover:scale-125 transition duration-300">
           <div class="card bg-base 100 shadow-xl">
-            <figure><img src="https://litslink.com/wp-content/uploads/2021/03/web-development.png" alt="Custom Software Developmet"></figure>
-          <div class="card-body">
+            <figure>
+              <img
+                src="https://litslink.com/wp-content/uploads/2021/03/web-development.png"
+                alt="Custom Software Developmet"
+              />
+            </figure>
+            <div class="card-body">
               <h2 class="card-title">Custom Software Developmet</h2>
-              <p>I develop custom-made software tailored to your specific business needs. My solutions are designed to be robust, scalable, and user-friendly, ensuring seamless integration with your existing systems. With a focus on delivering bug-free and efficient software, I aim to enhance your operational productivity and provide a competitive edge. Let's bring your vision to life with precision and innovation.</p>
+              <p>
+                I develop custom-made software tailored to your specific
+                business needs. My solutions are designed to be robust,
+                scalable, and user-friendly, ensuring seamless integration with
+                your existing systems. With a focus on delivering bug-free and
+                efficient software, I aim to enhance your operational
+                productivity and provide a competitive edge. Let's bring your
+                vision to life with precision and innovation.
+              </p>
 
-          <!-- <div class="card-actions justify-end"><a href="/link to Custome Software Dev" class="btn btn-secondary">View</a></div> -->
-          </div>
+              <!-- <div class="card-actions justify-end"><a href="/link to Custome Software Dev" class="btn btn-secondary">View</a></div> -->
+            </div>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="hover:scale-125 transition duration-300"> 
+        <div class="hover:scale-125 transition duration-300">
           <div class="card bg-base 100 shadow-xl">
-            <figure> <img src="https://images.app.goo.gl/uu3X8pAQpguwB4od8" alt="Mobile Application Development - IOS"> </figure>
-          <div class="card-body">
-            <h2 class="card-title">Mobile Application Dev - IOS</h2>
-            <p>I specialize in creating high-performance iOS applications using Swift and Objective-C. From concept to deployment, I ensure your app meets the highest standards of functionality and aesthetics. 
-              Whether you need a business app, a lifestyle app, or a gaming app, I provide solutions that engage users and drive business growth. Benefit from my expertise to deliver an exceptional mobile experience to your customers.</p>
+            <figure>
+              <img
+                src="https://t3.ftcdn.net/jpg/03/54/17/86/360_F_354178616_uSdqA6i1A1vkkskFPKOoxQOED0ZMIcn3.jpg"
+                alt="Mobile Application Dev - IOS"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Web Design</h2>
+              <p>
+                I design responsive and visually appealing websites tailored to
+                your brand and audience. With a focus on user experience and
+                accessibility, I create web applications that are easy to
+                navigate and optimized for all devices. Whether you need an
+                e-commerce platform, a corporate website, or a personal blog, I
+                ensure your online presence is both professional and engaging.
+                Elevate your brand with a custom-designed website that stands
+                out.
+              </p>
 
-          <!-- <div class="card-actions justify-end"><a href="/link to Mobile App Dev -IOS" class="btn btn-secondary">View</a></div> -->
+              <!-- <div class="card-actions justify-end"><a href="/link to web design" class="btn btn-secondary">View</a></div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="hover:scale-125 transition duration-300">
+          <div class="card bg-base 100 shadow-xl">
+            <figure>
+              <img
+                src="https://www.digital4design.com/wp-content/uploads/2019/04/Real-Importance-of-IOS-App-Development-Services.jpg"
+                alt="Mobile Application Dev - IOS"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Mobile Application Dev - IOS</h2>
+              <p>
+                I specialize in creating high-performance iOS applications using
+                Swift and Objective-C. From concept to deployment, I ensure your
+                app meets the highest standards of functionality and aesthetics.
+                Whether you need a business app, a lifestyle app, or a gaming
+                app, I provide solutions that engage users and drive business
+                growth. Benefit from my expertise to deliver an exceptional
+                mobile experience to your customers.
+              </p>
+
+              <!-- <div class="card-actions justify-end"><a href="/link to Mobile App Dev -IOS" class="btn btn-secondary">View</a></div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="hover:scale-125 transition duration-300">
+          <div class="card bg-base 100 shadow-xl">
+            <figure>
+              <img
+                src="https://www.pw.live/exams/wp-content/uploads/2024/01/Entrepreneurship-jpg.webp"
+                alt="Entrepreneurship"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Entrepreneurship</h2>
+              <p>
+                I offer strategic guidance and support for aspiring
+                entrepreneurs looking to start and grow small businesses. From
+                business plan development to market analysis and funding
+                strategies, I provide comprehensive services to turn your
+                entrepreneurial ideas into reality. Gain the confidence and
+                knowledge needed to navigate the complexities of starting a
+                business and achieve sustainable success.
+              </p>
+
+              <!-- <div class="card-actions justify-end"><a href="/link to Entrepreneurship" class="btn btn-secondary">View</a></div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="hover:scale-125 transition duration-300">
+          <div class="card bg-base 100 shadow-xl">
+            <figure>
+              <img
+                src="https://www.keenesystems.com/hs-fs/hubfs/software-testing.jpg?width=900&name=software-testing.jpg"
+                alt="Custom Software Developmet"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Software Testing</h2>
+              <p>
+                I provide thorough software testing services to ensure your
+                applications are robust, reliable, and bug-free. By writing
+                detailed test cases and performing rigorous testing, I help
+                identify and resolve issues before they impact your users. My
+                testing services enhance the quality and performance of your
+                software, providing you with the peace of mind that your product
+                meets industry standards and user expectations.
+              </p>
+
+              <!-- <div class="card-actions justify-end"><a href="/link to web software testing" class="btn btn-secondary">View</a></div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="hover:scale-125 transition duration-300">
+          <div class="card bg-base 100 shadow-xl">
+            <figure>
+              <img
+                src="https://t3.ftcdn.net/jpg/04/72/54/68/360_F_472546867_4MBw9cVFYE7AwnrIIbmZ8xXS0V3mrIzr.jpg"
+                alt="Mobile Application Dev - IOS"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Project Management</h2>
+              <p>
+                I specialize in orchestrating projects from conception to
+                completion with precision and clarity. By defining clear
+                objectives and milestones, I ensure projects stay on track and
+                deliver exceptional results. With a focus on efficient resource
+                allocation and stakeholder communication, I mitigate risks and
+                maximize outcomes. Let me help you navigate the complexities of
+                project management, ensuring your initiatives are successful and
+                impactful.
+              </p>
+
+              <!-- <div class="card-actions justify-end"><a href="/link to web design" class="btn btn-secondary">View</a></div> -->
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-
-
-       <!-- Card 3 -->
-       <div class="hover:scale-125 transition duration-300">
-         <div class="card bg-base 100 shadow-xl">
-           <figure><img src="https://www.pw.live/exams/wp-content/uploads/2024/01/Entrepreneurship-jpg.webp" alt="Entrepreneurship"></figure>
-         <div class="card-body">
-           <h2 class="card-title">Entrepreneurship</h2>
-           <p>I offer strategic guidance and support for aspiring entrepreneurs looking to start and grow small businesses. 
-            From business plan development to market analysis and funding strategies, I provide comprehensive services to turn your 
-            entrepreneurial ideas into reality. Gain the confidence and knowledge needed to navigate the complexities of starting a business and 
-            achieve sustainable success.</p>
-
-         <!-- <div class="card-actions justify-end"><a href="/link to Entrepreneurship" class="btn btn-secondary">View</a></div> -->
-        </div>
-       </div>
-      </div>
-
-
-              <!-- Card 4 -->
-              <div class="hover:scale-125 transition duration-300">
-                <div class="card bg-base 100 shadow-xl">
-                  <figure><img src="https://www.keenesystems.com/hs-fs/hubfs/software-testing.jpg?width=900&name=software-testing.jpg" alt="Custom Software Developmet"></figure>
-                <div class="card-body">
-                    <h2 class="card-title">Software Testing</h2>
-                    <p>I provide thorough software testing services to ensure your applications are robust, reliable, and bug-free. By writing 
-                      detailed test cases and performing rigorous testing, I help identify and resolve issues before they impact your users. 
-                      My testing services enhance the quality and performance of your software, providing you with the peace of mind that your product meets 
-                      industry standards and user expectations.</p>
-
-                <!-- <div class="card-actions justify-end"><a href="/link to web software testing" class="btn btn-secondary">View</a></div> -->
-                </div>
-                </div>
-              </div>
-      
-              <!-- Card 2 -->
-              <div class="hover:scale-125 transition duration-300"> 
-                <div class="card bg-base 100 shadow-xl">
-                  <figure><img src="https://t3.ftcdn.net/jpg/03/54/17/86/360_F_354178616_uSdqA6i1A1vkkskFPKOoxQOED0ZMIcn3.jpg" alt="Mobile Application Dev - IOS"></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Web Design</h2>
-                  <p>I design responsive and visually appealing websites tailored to your brand and audience.
-                     With a focus on user experience and accessibility, I create web applications that are easy to navigate and optimized for all devices. 
-                     Whether you need an e-commerce platform, a corporate website, or a personal blog, I ensure your online presence is both professional and engaging.
-                    Elevate your brand with a custom-designed website that stands out.</p>
-
-                <!-- <div class="card-actions justify-end"><a href="/link to web design" class="btn btn-secondary">View</a></div> -->
-                </div>
-              </div>
-            </div>
-
-  </div>
-
- 
-
- 
-  </div>
-
-        <!-- include footer.ejs-->
-  <%-include('./partials/footer.ejs') %>
-
-</body>
-
+    <!-- include footer.ejs-->
+    <%-include('./partials/footer.ejs') %>
+  </body>
 </html>

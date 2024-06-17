@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <link rel="stylesheet" href="/css/main.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
 
-<body tabindex="-1">
+  <body tabindex="-1">
+    <!-- include navbar.ejs-->
+    <%- include('partials/navbar', {page: '/about'}) %>
 
-     <!-- include navbar.ejs-->
-  <%- include('partials/navbar', {page: '/about'}) %>
-
-  <div class="container mx-auto p-4">
-    <div class="hero bg-base-200 rounded-lg p-6">
-      <div class="hero-content text-center ">
-        <div class="max-w-md">
-          <h1 class="text-5xl font-bold">About</h1>
-          <p class="py-6">Everything you want to know about me - the designer &amp; developer.</p>
+    <div class="container mx-auto p-4">
+      <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">About</h1>
+            <p class="py-6">
+              Everything you want to know about me - the designer &amp;
+              developer.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <br />
+      <br />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div>
-        <img class="w-full rounded-lg"
-        
-          src="/images/profile pic.jpg" alt="profile picture" />
-      
-      </div>
-      <div class="prose">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img
+            class="w-full rounded-lg"
+            src="/images/profile pic.jpg"
+            alt="profile picture"
+          />
+        </div>
+        <div class="prose">
+          <p>
+            My name is Emmanuel Ngufor and I'm currently studying at Seneca
+            Polytechnic.
+          </p>
 
-        <p>My name is Emmanuel Ngufor and I'm currently studying at Seneca Polytechnic.</p>
-
-        <p>Currently immersed in the world of coding, I'm honing my skills by building Full Stack Projects. 
-          Beyond the realm of programming, I'm passionate about staying updated on the latest tech trends and exploring their impact on various industries. 
-          In my free time, you'll often find me delving into soccer, football, watching movies, and occasionally taking a break to enjoy outdoor activities.
-         Excited about the endless possibilities that technology offers, I'm on a journey to merge creativity with coding proficiency.</p>
-          Below is a list of programming languages, frameworks and data technologies in which I have a high proficiency.
+          <p>
+            Currently immersed in the world of coding, I'm honing my skills by
+            building Full Stack Projects. Beyond the realm of programming, I'm
+            passionate about staying updated on the latest tech trends and
+            exploring their impact on various industries. In my free time,
+            you'll often find me delving into soccer, football, watching movies,
+            and occasionally taking a break to enjoy outdoor activities. Excited
+            about the endless possibilities that technology offers, I'm on a
+            journey to merge creativity with coding proficiency.
+          </p>
+          Below is a list of programming languages, frameworks and data
+          technologies in which I have a high proficiency.
           <ul>
             <li>C</li>
             <li>C++</li>
@@ -50,13 +62,11 @@
             <li>PostgreSQL</li>
             <li>Mongo DB</li>
           </ul>
+        </div>
       </div>
-    </div>  
-  </div>
+    </div>
 
-        <!-- include footer.ejs-->
-  <%-include('./partials/footer.ejs') %>
-
-</body>
-
+    <!-- include footer.ejs-->
+    <%-include('./partials/footer.ejs') %>
+  </body>
 </html>
