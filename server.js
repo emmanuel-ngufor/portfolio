@@ -34,6 +34,11 @@ app.get("/services", (req, res) => {
     res.render("services");
 });
 
+// GET "Resume"
+app.get("/resume", (req, res) => {
+    res.render("resume");
+});
+
 // GET "project1"
 app.get("/project1", (req, res) => {
     res.render("project1");
