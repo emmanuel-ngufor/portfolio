@@ -9,8 +9,9 @@ require("dotenv").config(); // Load environment variables from the .env file via
 
 // Configure Express App
 app.set("view engine", "ejs"); // Set view engine for EJS
+app.set('views', __dirname + '/views');
 app.set("views", path.join(__dirname, "views")); // Adjust views directory path
-app.use(express.static("public")); // Middleware to handle static files
+app.use(express.static(__dirname + '/public')); // Middleware to handle static files
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); // To handle form submissions
 
