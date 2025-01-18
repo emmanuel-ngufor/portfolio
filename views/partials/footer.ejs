@@ -13,7 +13,17 @@
             align-items: center;
         }
         .footer-icons a {
-            margin-right: 50px; /* Adjust the spacing between icons */
+            margin: 0 10px; /* Changed from margin-right to symmetric margins */
+        }
+        
+        @media (max-width: 640px) {
+            .footer-icons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .footer-icons a {
+                margin: 0;
+            }
         }
     </style>
 </head>
